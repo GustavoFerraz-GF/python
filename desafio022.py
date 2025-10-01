@@ -1,8 +1,13 @@
-nome = input('Digite seu nome completo: ')
-print(nome.upper())
-print(nome.lower())
-tamanho1 = len(''.join(nome.split()))
-print(tamanho1)
-primeiro_nome = nome.split()[0]
-tamanho2 = len(primeiro_nome)
-print(tamanho2)
+nome = str(input('Digite seu nome completo: ')).strip()
+print('Analisando seu nome...')
+
+print('Seu nome maiúsculas é: {}'.format(nome.upper()))
+
+print('Seu nome minúsculas é: {}'.format(nome.lower()))
+
+print('Seu mome tem ao todo {} letras'.format(len(nome) - nome.count(' ')))
+
+#print('Seu nome tem ao todo {} letras'.format(nome.find(' ')))
+
+separa = nome.split()
+print('Seu primeiro nome é {} e ele tem {} letras'.format(separa[0], len(separa[0])))
