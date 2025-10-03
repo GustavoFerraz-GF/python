@@ -1,4 +1,4 @@
-numero = input('Digite um número entre 0 e 9999: ')
+numero = str(input('Informe um número: ')) 
 
 unidade = len(numero[:4])
 print('unidade: {}'.format(unidade))
