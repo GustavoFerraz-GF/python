@@ -1,7 +1,4 @@
-nome = input('Digite seu nome completo: ')
-todo = nome.split()
-primeiro = todo[0]
-ultimo = todo[-1]
-print('Ex: {}'.format(todo))
-print('Primeiro: {}'.format(primeiro))
-print('Ultimo: {}'.format(ultimo))
+nome = str(input('Digite seu nome completo: ')).strip().split()
+print('Muito prazer em te conhecer! ')
+print('Seu primeiro nome é {}'.format(nome[0]))
+print('Seu ultimo nome é {}'.format(nome[-1]))
