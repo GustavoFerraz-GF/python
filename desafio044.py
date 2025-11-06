@@ -1,4 +1,5 @@
-preço = float(input('Valor do produto R$: '))
+print('LOJAS FERRAZ')
+preço = float(input('Preço das Compras: R$ '))
 
 print(f'O valor do produto é R${preço:.2f}.')
 
@@ -8,22 +9,21 @@ print('''Formas de pagamentos:
       [3] Cartão em até 2x (sem juros)
       [4] Cartão 3x ou mais (20% de acréscimo)
 ''')
-
-opção = int(input('Escolha a opção de pagamento: '))
-
-cartão = preço - (preço * 5 / 100)
-cartão3x = preço + (preço * 20 / 100)
+opção = int(input('Qual a opção de pagamento? '))
 if opção == 1:
     total = preço - (preço * 10 / 100)
-    print(f'Pagando à vista no dinheiro/cheque, o produto sai por R${total:.2f}.')
 elif opção == 2:
     total = preço - (preço * 5 / 100)
-    print(f'Pagando à vista no cartão, o produto sai por R${total:.2f}.')
 elif opção == 3:
     total = preço
-    print(f'parcelando em até 2x no cartão, o produto mantém o valor de R${total:.2f}.')
+    parcelas = total / 2
+    print(f'Sua compra será parcelada em 2x de R${parcelas:.2f}.')
 elif opção == 4:
     total = preço + (preço * 20 / 100)
-    print(f'Parcelando em 3x ou mais, o produto sai por R${total:.2f}')
+    totalparcelas = int(input('Quantas parcelas? '))
+    parcelas = total / totalparcelas
+    print(f'Sua compra será parcelada em {totalparcelas}x de R${parcelas:.2f} COM JUROS.')
 else:
-    print('Opção inválida! Tente novamente')
+    total = 0
+    print('Opção inválida de Pagamento! Tente novamente')
+print(f'Sua compra de R$ {preço:.2f} vai custar R${total:.2f} no final.')

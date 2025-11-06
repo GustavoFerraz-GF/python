@@ -4,12 +4,14 @@ nascimento = int(input('Informe o ano de nascimento do atleta: '))
 idade = atual - nascimento
 print(f'O atleta tem {idade} anos.')
 if idade <= 9:
-    print('O atleta está na categoria MIRIM')
+    print('Classificação: MIRIM')
 elif idade <= 14:
-    print('O atleta está na categoria INFATIL')
+    print('Classificação: INFATIL')
 elif idade <= 19:
-    print('O atleta está na categoria JUNIOR')
-elif idade <= 20:
-    print('O atleta está na categoria SÊNIOR')
+    print('Classificação: JUNIOR')
+elif idade <= 25:
+    print('Classificação: SÊNIOR')
+elif idade > 25:
+    print('Classificação: MASTER')
 else:
-    print('O atleta está na categoria MASTER')
+    print('Opção Inválida. Tente Novamente!')
