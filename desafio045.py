@@ -1,6 +1,6 @@
 from random import randint
 from time import sleep
-computador = randint(1, 3)
+computador = randint(0, 2)
 print('''Vamos jogar JOKENPÔ? 
       [1] SIM
       [2] NÃO      
@@ -22,16 +22,16 @@ if opção == 1:
     sleep(0.5)
     print('PÔ')
     sleep(0.5)
-    símbolos = {1: 'Tesoura', 2:'Papel', 3:'Pedra'}
+    símbolos = {0:'Tesoura', 1:'Papel', 2:'Pedra'}
     print('-=' * 15)
     print(f'Você escolheu {símbolos[jogador]}')
     print(f'O computador escolheu {símbolos[computador]}')
     print('-=' * 15)
     if jogador == computador:
         print('EMPATE!')
-    elif (jogador == 1 and computador == 2) or \
-        (jogador == 2 and computador == 3) or \
-        (jogador == 3 and computador == 1):
+    elif (jogador == 0 and computador == 1) or \
+        (jogador == 1 and computador == 2) or \
+        (jogador == 2 and computador == 0):
         print('VOCÊ GANHOU! 🎉')
     else:
         print('EU GANHEI! 😈')
